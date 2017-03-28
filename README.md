@@ -1,47 +1,47 @@
-# MERN-boilerplate-lite
+# MERN Boilerplate (LITE)
 A simple boilerplate for creating Web Applications involving React, Express, Node, and MongoDB
 
 ## Getting Started
 1. Install [Node.js](https://nodejs.org/en/)
 2. Install [MongoDB](https://www.mongodb.com/)
 
-  `brew install mongodb` (If you have Homebrew)
+    `brew install mongodb` (If you have Homebrew)
 
 3. Copy the Project Repo into your own directory
 
-  `git clone git@github.com:alexander-lee/MERN-boilerplate-lite.git`
+    `git clone git@github.com:alexander-lee/MERN-boilerplate-lite.git`
 
 4. Install all the Dependencies
 
-  `npm install`
+    `npm install`
 
 5. Install Gulp globally
 
-  `npm install -global gulp-cli`
+    `npm install -global gulp-cli`
 
 6. Start the Node Server
 
-  `npm start` or `gulp`
+    `npm start` or `gulp`
 
 ## Setting up the Database
 1. Create a Directory for MongoDB to live in (Create the folder data/db at your root).
 
-  `mkdir -p /data/db`
+    `mkdir -p /data/db`
 
 2. Make sure your directory has the right permissions
 
-  `chmod 0755 /data/db && sudo chown $USER /data/db`
+    `chmod 0755 /data/db && sudo chown $USER /data/db`
 
 3. Create a Database (if you didn't make one yet)
 
-  `mongo`
-  `use sampledb`
+    `mongo`
+    `use sampledb`
 
 4. Add your Database to the configuration file ([config.js](https://github.com/alexander-lee/MERN-boilerplate-lite/blob/master/config.js))
 
 5. Before you start the Node Server, start your Mongo Process
 
-  `mongod --dbpath /data/db`
+    `mongod --dbpath /data/db`
 
 
 
