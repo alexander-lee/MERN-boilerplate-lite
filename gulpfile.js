@@ -12,13 +12,13 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 
 gulp.task('watch', function(){
-  gulp.watch('./react/**/*', ['build']);
-  gulp.watch('./public/css/**/*', ['sass']);
+  gulp.watch('./client/**/*', ['build']);
+  gulp.watch('./styles/**/*', ['sass']);
 });
 
 gulp.task('build', function(){
   var b = browserify({
-    entries: 'react/app.jsx',
+    entries: 'client/app.jsx',
     debug: true,
     transform: [["babelify", { "presets": ["react"] }]]
   });
@@ -35,7 +35,7 @@ gulp.task('build', function(){
 });
 
 gulp.task('sass', function(){
-  return gulp.src('./public/css/**/*.scss')
+  return gulp.src('./styles/Main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
@@ -53,7 +53,7 @@ gulp.task('prod-env', function(){
 });
 
 gulp.task('run', function(){
-  const forbidden = ['react', 'node_modules', 'public'];
+  const forbidden = ['client', 'node_modules', 'public'];
   nodemon({
     script: './bin/www',
     ext: 'js',
