@@ -3,7 +3,7 @@ A simple boilerplate for creating Web Applications involving React, Express, Nod
 
 ## Getting Started
 1. Install [Node.js](https://nodejs.org/en/)
-2. Install [MongoDB](https://docs.mongodb.com/manual/installation/)
+2. Install [MongoDB](https://docs.mongodb.com/v3.2/administration/install-community/)
 
     `brew install mongodb` (If you have Homebrew)
 
