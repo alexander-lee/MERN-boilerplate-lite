@@ -24,25 +24,34 @@ A simple boilerplate for creating Web Applications involving React, Express, Nod
     `npm start` or `gulp`
 
 ## Setting up the Database
-1. Create a Directory for MongoDB to live in (Create the folder data/db at your root).
+1. Create a Directory for MongoDB to live in (Create the folder /data/db at your root).
 
     `mkdir -p /data/db`
 
 2. Make sure your directory has the right permissions
 
     `chmod 0755 /data/db && sudo chown $USER /data/db`
-
-3. Create a Database (if you didn't make one yet)
-
-    `mongo`
-    `use sampledb`
-
-4. Add your Database to the configuration file ([config.js](https://github.com/alexander-lee/MERN-boilerplate-lite/blob/master/config.js))
-
-5. Before you start the Node Server, start your Mongo Process
+    
+3. Before you start the Node Server, start your Mongo Process
 
     `mongod --dbpath /data/db`
 
+4. Create a Database (if you didn't make one yet)
+
+    `mongo`
+    
+    `use sampledb`
+
+5. Add your Database to the configuration file ([config.js](https://github.com/alexander-lee/MERN-boilerplate-lite/blob/master/config.js))
+
+    ```
+    module.exports = {
+        "development": {
+            "db": "mongodb://localhost:27017/{YOUR DATABASE NAME}"
+        }
+    }
+
+    ```
 
 
 ## File Structure
